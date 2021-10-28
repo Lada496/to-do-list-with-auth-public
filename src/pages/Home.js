@@ -17,16 +17,15 @@ import {
   push,
   onValue,
 } from "firebase/database";
-initializeApp(firebaseConfig);
+const app = initializeApp(firebaseConfig);
+const db = getDatabase(app);
 const Home = () => {
   const dispatch = useDispatch();
   const [init, setInit] = useState(true);
   const [list, setList] = useState([]);
   const history = useHistory();
   const auth = getAuth();
-  //   const uid = auth.currentUser.uid;
   const uid = useSelector((state) => state.auth.uid);
-  const db = getDatabase();
   const dbRef = ref(db, `notes/${uid}`);
   const readData = useCallback(() => {
     onValue(dbRef, (snapshot) => {
