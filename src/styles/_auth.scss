@@ -1,0 +1,90 @@
+@import "_base.scss";
+.auth {
+  width: fit-content;
+  display: flex;
+  margin: 4rem auto;
+  gap: 2rem;
+  &__btn {
+    @extend %button;
+    color: #fafafa;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background-color: transparent;
+    border: 2px #fafafa solid;
+    a {
+      text-decoration: none;
+      color: #fafafa;
+    }
+  }
+  &__form {
+    display: block;
+    width: fit-content;
+    margin: auto;
+    label {
+      display: block;
+      //   width: 5rem;
+      color: #fafafa;
+      font-weight: bold;
+    }
+    .valid {
+      border: 2px #fafafa solid;
+      border-radius: 2px;
+      width: 320px;
+    }
+    button {
+      @extend %button;
+      display: block;
+      margin: 0.5rem auto;
+      border: 2px #fafafa solid;
+      background-color: transparent;
+      font-weight: bold;
+      font-size: 1rem;
+      color: #fafafa;
+      &:disabled,
+      &:disabled:hover,
+      &:disabled:active {
+        // border-color: #555;
+        // color: #555;
+        background-color: #ccc;
+        cursor: not-allowed;
+      }
+    }
+  }
+}
+
+.error__text {
+  font-weight: bold;
+  color: #fafafa;
+  margin-top: 0.1rem;
+  font-size: 0.7rem;
+}
+
+.error__message {
+  color: #fafafa;
+  text-align: center;
+  font-weight: bold;
+}
+
+.invalid {
+  //   border: #ff0000 solid 2px;
+  border: 2px #ff0000 solid;
+  background-color: #ffbaba;
+  border-radius: 2px;
+  width: 320px;
+
+  &:focus {
+    border: #ff7b7b solid 2px;
+    //   background-color: #ffbaba;
+  }
+}
+
+.logout {
+  @extend %button;
+  color: #fafafa;
+  font-weight: bold;
+  background-color: transparent;
+  border: 1px #fafafa solid;
+  position: fixed;
+  right: 1rem;
+  top: 2rem;
+}

@@ -1,0 +1,11 @@
+.list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 1em;
+}
+.heading {
+  text-align: center;
+  color: white;
+}

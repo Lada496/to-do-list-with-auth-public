@@ -1,0 +1,35 @@
+body {
+  margin: 0rem;
+  font-family: "Yomogi", cursive;
+  background-image: url(../images/cork.png);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+h1,
+h2 {
+  text-align: center;
+  color: #fafafa;
+}
+
+%button {
+  font-family: "Yomogi", cursive;
+  border-radius: 5px;
+  &:hover {
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,48 @@
+@import "_base.scss";
+.form {
+  display: block;
+  background-color: #fafafa;
+  height: 180px;
+  width: 400px;
+  border-radius: 5px;
+  padding: 1rem;
+  margin: auto;
+  input,
+  textarea {
+    width: 90%;
+    border: 1px #666 solid;
+    border-radius: 5px;
+  }
+}
+
+.normal {
+  @extend %button;
+  height: 1.5rem;
+  background-color: #fafafa;
+  border: 1px #666 solid;
+}
+
+.add {
+  @extend %button;
+  height: 1.5rem;
+  background-color: #d0b49f;
+  color: white;
+  border: 1px #d0b49f solid;
+  margin-right: 0.5rem;
+}
+
+.open {
+  background-color: transparent;
+  color: #fafafa;
+  display: block;
+  margin: auto;
+  font-family: "Yomogi", cursive;
+  width: fit-content;
+  height: 2rem;
+  border: none;
+  border-bottom: 2px white solid;
+  font-size: 1.5rem;
+  &:hover {
+    cursor: pointer;
+  }
+}
