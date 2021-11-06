@@ -17,8 +17,10 @@ import {
   push,
   onValue,
 } from "firebase/database";
-const app = initializeApp(firebaseConfig);
-const db = getDatabase(app);
+
+import { db } from "../config/config";
+// const app = initializeApp(firebaseConfig);
+// const db = getDatabase(app);
 const Home = () => {
   const dispatch = useDispatch();
   const [init, setInit] = useState(true);
