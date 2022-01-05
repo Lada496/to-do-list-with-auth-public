@@ -3,24 +3,12 @@ import { useHistory } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import AddTodoItem from "../components/AddTodoItem";
 import TodoList from "../components/TodoList";
-import { initializeApp } from "firebase/app";
-import { firebaseConfig } from "../config/config";
 import { getAuth, signOut } from "firebase/auth";
 import { authActions } from "../store/auth-slice";
 
-import {
-  getDatabase,
-  ref,
-  child,
-  remove,
-  update,
-  push,
-  onValue,
-} from "firebase/database";
+import { ref, child, remove, update, push, onValue } from "firebase/database";
 
 import { db } from "../config/config";
-// const app = initializeApp(firebaseConfig);
-// const db = getDatabase(app);
 const Home = () => {
   const dispatch = useDispatch();
   const [init, setInit] = useState(true);
